@@ -8,10 +8,13 @@ on:
   workflow_dispatch:
 
 jobs:
+
   deploy:
+
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Deploy on Ubuntu server
         uses: appleboy/ssh-action@v1.2.0
         with:
