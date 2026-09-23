@@ -8,13 +8,10 @@ on:
   workflow_dispatch:
 
 jobs:
-
   deploy:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Deploy on Ubuntu server
         uses: appleboy/ssh-action@v1.2.0
         with:
@@ -36,10 +33,10 @@ jobs:
             git pull origin main
 
             echo "Installation des dépendances..."
-            bun install
+            /home/etudiant/.bun/bin/bun install
 
             echo "Compilation Astro..."
-            bun run build
+            /home/etudiant/.bun/bin/bun run build
 
             echo "Redémarrage de l'application..."
             sudo systemctl restart scolarite
