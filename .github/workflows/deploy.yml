@@ -48,8 +48,10 @@ jobs:
             sudo systemctl status scolarite
 
             echo "Health check..."
+            sleep 3
             curl --fail http://localhost:4321/
 
             echo "======================================"
             echo "Déploiement terminé"
             echo "======================================"
+            
