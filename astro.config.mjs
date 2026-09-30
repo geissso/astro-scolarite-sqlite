@@ -3,11 +3,15 @@ import node from "@astrojs/node";
 import auth from "auth-astro";
 
 export default defineConfig({
-  output:"server",
+  output: "server",
 
-  adapter:node({
-      mode:"standalone"
+  adapter: node({
+      mode: "standalone"
   }),
 
-  integrations: [auth()]
+  integrations: [auth()],
+
+  security: {
+    checkOrigin: false
+  }
 });
