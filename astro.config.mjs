@@ -6,12 +6,9 @@ export default defineConfig({
   output: "server",
 
   adapter: node({
-      mode: "standalone"
+      mode: "standalone",
+      trustProxy: true
   }),
 
-  integrations: [auth()],
-
-  security: {
-    checkOrigin: false
-  }
+  integrations: [auth()]
 });

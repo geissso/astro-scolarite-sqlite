@@ -6,7 +6,7 @@ export async function onRequest(context: any, next: any) {
   if (context.url.pathname.startsWith('/api/auth/') || context.url.pathname === '/login') {
     return next();
   }
-
+console.log('DEBUG headers:', JSON.stringify(Object.fromEntries(context.request.headers)));
   try {
     const session = await getSession(context.request);
 
