@@ -10,5 +10,9 @@ export default defineConfig({
       trustProxy: true
   }),
 
-  integrations: [auth()]
+  integrations: [auth()],
+
+  security: {
+    checkOrigin: false
+  }
 });
